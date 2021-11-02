@@ -1,0 +1,27 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "Price": 5.89,
+      "price": "9.99"
+    },
+    {
+      "id": 2,
+      "name": "Notebook Mac Pro",
+      "Price": 12000.89,
+      "price": "12000"
+    },
+    {
+      "id": 3,
+      "name": "Sansumg S20",
+      "Price": 5000.89,
+      "price": "2222"
+    },
+    {
+      "name": "Geladeira",
+      "price": "1999.00",
+      "id": 4
+    }
+  ]
+}
