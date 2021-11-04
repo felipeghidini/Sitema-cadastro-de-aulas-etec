@@ -1,27 +1,22 @@
 {
-  "products": [
+  "aulas": [
     {
       "id": 1,
-      "name": "Caneta BIC Preta",
-      "Price": 5.89,
-      "price": "9.99"
+      "sala": "10",
+      "nome": "Felipe Ghidini",
+      "aula": "Desenvolvimento Web",
+      "data": "10/10/2021",
+      "inicioAula": "10:30",
+      "fimAula": "12:00"
     },
     {
       "id": 2,
-      "name": "Notebook Mac Pro",
-      "Price": 12000.89,
-      "price": "12000"
-    },
-    {
-      "id": 3,
-      "name": "Sansumg S20",
-      "Price": 5000.89,
-      "price": "2222"
-    },
-    {
-      "name": "Geladeira",
-      "price": "1999.00",
-      "id": 4
+      "sala": "10",
+      "nome": "Felipe Ghidini",
+      "aula": "Desenvolvimento Web",
+      "data": "10/10/2021",
+      "inicioAula": "10:30",
+      "fimAula": "12:00"
     }
   ]
 }

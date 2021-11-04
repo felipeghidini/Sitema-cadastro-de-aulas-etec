@@ -1,5 +1,5 @@
 export interface Aula {
-  id: string,
+  id?: string,
   sala: string;
   nome: string;
   aula: string;
