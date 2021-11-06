@@ -17,6 +17,15 @@
       "data": "10/10/2021",
       "inicioAula": "10:30",
       "fimAula": "12:00"
+    },
+    {
+      "sala": "13",
+      "nome": "Felipe Rodrigues Ghidini",
+      "aula": "Aula Teste",
+      "data": "12/12/2021",
+      "inicioAula": "10:00",
+      "fimAula": "12:00",
+      "id": 3
     }
   ]
 }

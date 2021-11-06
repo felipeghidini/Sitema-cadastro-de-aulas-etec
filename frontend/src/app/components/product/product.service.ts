@@ -4,13 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from './product.model';
 import { Observable, EMPTY } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { Aula } from './aula.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  baseUrl = "http://localhost:3002/products"
+  baseUrl = "http://localhost:3002/aulas"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -24,40 +25,40 @@ export class ProductService {
     })
   }
 
-  create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product).pipe(
+  create(aula: Aula): Observable<Aula> {
+    return this.http.post<Aula>(this.baseUrl, aula).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
 
-  read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl).pipe(
+  read(): Observable<Aula[]> {
+    return this.http.get<Aula[]>(this.baseUrl).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  readById(id: string): Observable<Product> {
+  readById(id: string): Observable<Aula> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Product>(url).pipe(
+    return this.http.get<Aula>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Product>(url, product).pipe(
+  update(aula: Aula): Observable<Aula> {
+    const url = `${this.baseUrl}/${aula.id}`
+    return this.http.put<Aula>(url, aula).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
-  delete(id: number): Observable<Product> {
+  delete(id: string): Observable<Aula> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Product>(url).pipe(
+    return this.http.delete<Aula>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
