@@ -1,13 +1,29 @@
 <mat-card>
-  <mat-card-title>Excluir Produto</mat-card-title>
+  <mat-card-title>Excluir Aula</mat-card-title>
   <form>
     <mat-form-field>
-      <input matInput placeholder="Nome"
-            [value]="product.name" name="name" disabled>
+      <input matInput placeholder="Sala"
+            [value]="aula.sala" name="sala" disabled>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Preço (R$)"
-            [value]="product.price" name="price" disabled>
+      <input matInput placeholder="Nome do Professor"
+            [value]="aula.nome" name="nome" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Aula"
+            [value]="aula.aula" name="aula" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Data"
+            [value]="aula.data" name="data" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Início da Aula"
+            [value]="aula.inicioAula" name="inicioAula" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Fim da Aula"
+            [value]="aula.fimAula" name="fimAula" disabled>
     </mat-form-field>
   </form>
   <button mat-raised-button (click)="deleteProduct()" color="warn">
