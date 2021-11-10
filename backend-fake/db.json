@@ -21,11 +21,20 @@
     {
       "sala": "13",
       "nome": "Felipe Rodrigues Ghidini",
-      "aula": "Aula Teste",
+      "aula": "Aula Teste Edit",
       "data": "12/12/2021",
       "inicioAula": "10:00",
       "fimAula": "12:00",
       "id": 3
+    },
+    {
+      "sala": "122",
+      "nome": "Felipe Rodrigues Ghidini",
+      "aula": "Angula",
+      "data": "12/12/2021",
+      "inicioAula": "10:00",
+      "fimAula": "12:00",
+      "id": 4
     }
   ]
 }

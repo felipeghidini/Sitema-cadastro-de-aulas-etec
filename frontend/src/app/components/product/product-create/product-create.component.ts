@@ -11,10 +11,6 @@ import { Aula } from '../aula.model';
 })
 export class ProductCreateComponent implements OnInit {
 
-  product: Product = {
-    name: '',
-    price: null
-  }
 
   aula: Aula = {
     sala: '',
@@ -33,7 +29,7 @@ export class ProductCreateComponent implements OnInit {
 
   createProduct(): void {
     this.productService.create(this.aula).subscribe(() => {
-      this.productService.showMessage('Produto criado')
+      this.productService.showMessage('Aula cadastrata')
       this.router.navigate(['/products'])
     })
   }

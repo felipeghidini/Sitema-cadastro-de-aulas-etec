@@ -11,7 +11,6 @@ import { Aula } from '../aula.model';
 })
 export class ProductDeleteComponent implements OnInit {
 
-//  product: Product
   aula: Aula
 
   constructor(private productService: ProductService,
@@ -27,7 +26,7 @@ export class ProductDeleteComponent implements OnInit {
 
   deleteProduct(): void {
     this.productService.delete(this.aula.id).subscribe(() => {
-      this.productService.showMessage('Produto excluído com sucesso')
+      this.productService.showMessage('Aula excluída com sucesso')
       this.router.navigate(['/products'])
     })
   }

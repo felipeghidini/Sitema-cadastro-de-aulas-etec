@@ -1,13 +1,29 @@
 <mat-card>
-  <mat-card-title>Alterar Produto</mat-card-title>
+  <mat-card-title>Alterar Aula</mat-card-title>
   <form>
     <mat-form-field>
-      <input matInput placeholder="Nome"
-            [(ngModel)]="product.name" name="name">
+      <input matInput placeholder="Sala"
+            [(ngModel)]="aula.sala" name="sala">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Preço (R$)"
-            [(ngModel)]="product.price" name="price">
+      <input matInput placeholder="Nome do Professor"
+            [(ngModel)]="aula.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Aula"
+            [(ngModel)]="aula.aula" name="aula">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Data"
+            [(ngModel)]="aula.data" name="data">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Início da Aula"
+            [(ngModel)]="aula.inicioAula" name="inicioAula">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Fim da Aula"
+            [(ngModel)]="aula.fimAula" name="fimAula">
     </mat-form-field>
   </form>
   <button mat-raised-button (click)="updateProduct()" color="primary">
