@@ -1,0 +1,9 @@
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (1,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (2,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (3,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (4,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (5,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (6,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (7,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (8,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (9,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
