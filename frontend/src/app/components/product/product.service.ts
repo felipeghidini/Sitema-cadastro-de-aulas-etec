@@ -10,7 +10,7 @@ import { Aula } from './aula.model';
 })
 export class ProductService {
 
-  baseUrl = "http://localhost:3002/aulas"
+  baseUrl = "http://localhost:8080/aulas"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
