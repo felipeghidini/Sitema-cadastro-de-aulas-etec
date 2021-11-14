@@ -1,0 +1,11 @@
+create sequence hibernate_sequence start 1 increment 1;
+create table tb_aulas (id int8 not null, aula varchar(255), data date, fim_aula varchar(255), inicio_aula varchar(255), nome varchar(255), sala varchar(255), primary key (id));
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (1,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (2,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (3,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (4,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (5,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (6,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (7,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (8,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
+INSERT INTO tb_aulas(id,sala,nome,aula,data,inicio_aula,fim_aula) VALUES (9,'10','Felipe Ghidini','Desenvolvimento Web','2021-11-12','10:00','12:00');
