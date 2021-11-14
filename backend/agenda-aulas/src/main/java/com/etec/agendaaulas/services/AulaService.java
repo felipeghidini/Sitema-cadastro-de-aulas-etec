@@ -1,6 +1,7 @@
 package com.etec.agendaaulas.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,10 @@ public class AulaService {
 	
 	public List<Aula> findAll() {
 		return aulaRepository.findAll();
+	}
+	
+	public Optional<Aula> findById(Long id) {
+		return aulaRepository.findById(id);
 	}
 
 }
