@@ -22,5 +22,13 @@ public class AulaService {
 	public Optional<Aula> findById(Long id) {
 		return aulaRepository.findById(id);
 	}
+	
+	public Aula save(Aula aula) {
+		return aulaRepository.save(aula);
+	}
+	
+	public void delete(Aula aula) {
+		aulaRepository.delete(aula);
+	}
 
 }

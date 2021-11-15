@@ -1,13 +1,20 @@
 package com.etec.agendaaulas.controllers;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,4 +43,20 @@ public class AulaController {
 			return new ResponseEntity<Aula>(aula0.get(), HttpStatus.OK);
 		}
 	}
+	
+	@PostMapping("/")
+	public ResponseEntity<Aula> saveAula(@RequestBody @Valid Aula aula) {
+		return new ResponseEntity<Aula>(aulaService.save(aula), HttpStatus.CREATED);
+	}
+	
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteLive(@PathVariable(value="id") Long id) {
+        Optional<Aula> aulaO = aulaService.findById(id);
+        if(!aulaO.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }else {
+        	aulaService.delete(aulaO.get());
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+    }
 }
