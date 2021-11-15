@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +36,7 @@ public class AulaController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Aula> getOneAula(@PathVariable(value ="id") Long id) {
+	public ResponseEntity<Aula> getOneAula(@PathVariable(value ="id") String id) {
 	Optional<Aula> aula0 = aulaService.findById(id);
 		if(!aula0.isPresent()) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -46,17 +47,29 @@ public class AulaController {
 	
 	@PostMapping("/")
 	public ResponseEntity<Aula> saveAula(@RequestBody @Valid Aula aula) {
-		return new ResponseEntity<Aula>(aulaService.save(aula), HttpStatus.CREATED);
+		return new ResponseEntity<Aula>(aulaService.add(aula), HttpStatus.CREATED);
 	}
 	
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteLive(@PathVariable(value="id") Long id) {
+    public ResponseEntity<?> deleteLive(@PathVariable(value="id") String id) {
         Optional<Aula> aulaO = aulaService.findById(id);
         if(!aulaO.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }else {
         	aulaService.delete(aulaO.get());
             return new ResponseEntity<>(HttpStatus.OK);
+        }
+    }
+    
+    @PutMapping("/{id}")
+    public ResponseEntity<Aula> updateLive(@PathVariable(value="id") String id,
+                                            @RequestBody @Valid Aula aula) {
+        Optional<Aula> aulaO = aulaService.findById(id);
+        if(!aulaO.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }else {
+            aula.setId(aulaO.get().getId());
+            return new ResponseEntity<Aula>(aulaService.add(aula), HttpStatus.OK);
         }
     }
 }

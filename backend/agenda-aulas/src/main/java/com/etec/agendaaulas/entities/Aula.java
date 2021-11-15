@@ -14,7 +14,7 @@ public class Aula {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private Long id;
+	private String id;
 	private String sala;
 	private	String nome;
 	private	String aula;
@@ -26,7 +26,7 @@ public class Aula {
 		
 	}
 
-	public Aula(Long id, String sala, String nome, String aula, LocalDate data, String inicioAula, String fimAula) {
+	public Aula(String id, String sala, String nome, String aula, LocalDate data, String inicioAula, String fimAula) {
 		this.id = id;
 		this.sala = sala;
 		this.nome = nome;
@@ -36,11 +36,11 @@ public class Aula {
 		this.fimAula = fimAula;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
