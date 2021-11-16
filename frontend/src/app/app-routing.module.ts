@@ -13,19 +13,19 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'products',
+    path: 'aulas',
     component: ProductCrudComponent
   },
   {
-    path: 'products/create',
+    path: 'aulas/create',
     component: ProductCreateComponent
   },
   {
-    path: 'products/update/:id',
+    path: 'aulas/update/:id',
     component: ProductUpdateComponent
   },
   {
-    path: 'products/delete/:id',
+    path: 'aulas/delete/:id',
     component: ProductDeleteComponent
   }
 ];

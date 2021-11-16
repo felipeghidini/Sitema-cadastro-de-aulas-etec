@@ -27,12 +27,12 @@ export class ProductDeleteComponent implements OnInit {
   deleteProduct(): void {
     this.productService.delete(this.aula.id).subscribe(() => {
       this.productService.showMessage('Aula excluída com sucesso')
-      this.router.navigate(['/products'])
+      this.router.navigate(['/aulas'])
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/aulas'])
   }
 
 }

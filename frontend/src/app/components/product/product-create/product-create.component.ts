@@ -30,11 +30,11 @@ export class ProductCreateComponent implements OnInit {
   createProduct(): void {
     this.productService.create(this.aula).subscribe(() => {
       this.productService.showMessage('Aula cadastrata')
-      this.router.navigate(['/products'])
+      this.router.navigate(['/aulas'])
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/products'])
+    this.router.navigate(['/aulas'])
   }
 }
