@@ -19,7 +19,7 @@ public class AulaService {
 		return aulaRepository.findAll();
 	}
 	
-	public Optional<Aula> findById(String id) {
+	public Optional<Aula> findById(Long id) {
 		return aulaRepository.findById(id);
 	}
 	

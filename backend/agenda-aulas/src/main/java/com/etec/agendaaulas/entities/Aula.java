@@ -8,25 +8,29 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "tb_aulas")
 public class Aula {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private String id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue (generator = "system-uuid")
+//	@GenericGenerator (name = "system-uuid", strategy = "uuid")
+	private Long id;
 	private String sala;
 	private	String nome;
 	private	String aula;
 	private LocalDate data;
 	private String inicioAula;
 	private String fimAula;
-	
+		
 	public Aula() {
 		
 	}
 
-	public Aula(String id, String sala, String nome, String aula, LocalDate data, String inicioAula, String fimAula) {
+	public Aula(Long id, String sala, String nome, String aula, LocalDate data, String inicioAula, String fimAula) {
 		this.id = id;
 		this.sala = sala;
 		this.nome = nome;
@@ -36,11 +40,11 @@ public class Aula {
 		this.fimAula = fimAula;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -91,5 +95,4 @@ public class Aula {
 	public void setFimAula(String fimAula) {
 		this.fimAula = fimAula;
 	}	
-
 }
